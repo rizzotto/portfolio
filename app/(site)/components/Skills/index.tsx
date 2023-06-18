@@ -10,6 +10,7 @@ import {
   SiFigma,
   SiNodedotjs,
 } from "react-icons/si";
+import { TbLetterS } from "react-icons/tb";
 
 type Props = {
   skills: Skill[];
@@ -58,6 +59,12 @@ export default function Skills({ skills }: Props) {
     css: (
       <SiCss3 size={22} className="group-hover:fill-white dark:fill-zinc-800" />
     ),
+    sanity: (
+      <TbLetterS
+        size={22}
+        className="group-hover:text-white dark:text-zinc-800"
+      />
+    ),
     javascript: (
       <SiJavascript
         size={22}
@@ -78,6 +85,7 @@ export default function Skills({ skills }: Props) {
     javascript: "hover:bg-[#f7df1e]",
     next: "hover:bg-[#000000]",
     node: "hover:bg-[#63b64c]",
+    sanity: "hover:bg-[#a93b32]",
     react: "hover:bg-[#00d8ff]",
     tailwind: "hover:bg-[#07b0ce]",
     typescript: "hover:bg-[#3178c6]",
@@ -88,6 +96,7 @@ export default function Skills({ skills }: Props) {
     figma: "dark:hover:bg-[#f24e1e]",
     javascript: "dark:hover:bg-[#f7df1e]",
     next: "dark:hover:bg-[#000000]",
+    sanity: "dark:hover:bg-[#a93b32]",
     node: "dark:hover:bg-[#63b64c]",
     react: "dark:hover:bg-[#00d8ff]",
     tailwind: "dark:hover:bg-[#07b0ce]",

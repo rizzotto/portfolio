@@ -8,10 +8,13 @@ type Props = {
 
 export default function Header({ pages }: Props) {
   return (
-    <header>
+    <header className="animate-slide-in-down">
       <div className="bg-[#FEFEFE] rounded-lg dark:bg-neutral-700 navbar">
         <div className="navbar-start">
-          <Link href="/" className="text-xl normal-case btn btn-ghost">
+          <Link
+            href="/"
+            className="text-xl text-gray-800 normal-case btn btn-ghost dark:text-white"
+          >
             Rizzotto
           </Link>
         </div>
@@ -55,7 +58,7 @@ export default function Header({ pages }: Props) {
               {pages.map((page) => (
                 <li key={page._id}>
                   <Link
-                    className="dark:hover:text-white hover:text-neutral-700"
+                    className="text-gray-800 dark:hover:text-white hover:text-neutral-700"
                     href={`/${page.slug}`}
                     aria-current="page"
                   >

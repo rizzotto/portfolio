@@ -17,7 +17,7 @@ export default function FirstSection({ introduction }: Props) {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <section className="flex flex-row justify-between max-[885px]:flex-col max-[885px]:items-center my-4">
+    <section className="flex flex-row justify-between max-[885px]:flex-col max-[885px]:items-center my-4 animate-slide-in-right">
       <div
         style={{
           backgroundImage:
@@ -27,13 +27,13 @@ export default function FirstSection({ introduction }: Props) {
         }}
         className="max-w-[760px] max-[885px]:max-w-full p-12 max-[640px]:p-6 rounded-3xl transition-transform flex flex-col w-full"
       >
-        <h1 className="p-2 text-3xl font-bold max-[640px]:text-2xl">
+        <h1 className="p-2 text-3xl font-bold max-[640px]:text-2xl text-gray-800 dark:text-white">
           {introduction.title}
         </h1>
-        <h2 className="p-2 mt-4 text-2xl font-semibold text-gray-700 max-[640px]:text-lg dark:text-white">
+        <h2 className="p-2 mt-4 text-2xl font-semibold text-gray-800 max-[640px]:text-lg dark:text-white">
           {introduction.subtitle}
         </h2>
-        <div className="p-2 text-xl font-semibold text-transparent max-[640px]:text-lg bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text">
+        <div className="p-2 text-xl font-semibold text-transparent max-[640px]:text-lg bg-gradient-to-r from-red-400 via-purple-500 to-cyan-600 bg-clip-text">
           {introduction.quote}
         </div>
         <div className="mt-auto">
