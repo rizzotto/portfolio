@@ -2,6 +2,9 @@ import Link from "next/link";
 import "../globals.css";
 import { Inter } from "next/font/google";
 import { getPages } from "@/sanity/sanity-utils";
+import React from "react";
+import Providers from "../provider";
+import Header from "./components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,27 +24,14 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans max-w-3xl mx-auto py-10`}>
-        <header className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-lg font-bold text-transparent bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text"
-          >
-            Home
-          </Link>
-          <div className="flex items-center gap-5 text-sm text-gray-600">
-            {pages.map((page) => (
-              <Link
-                className="hover:underline"
-                key={page._id}
-                href={`/${page.slug}`}
-              >
-                {page.title}
-              </Link>
-            ))}
-          </div>
-        </header>
-        <main className="py-20">{children}</main>
+      <body
+        suppressHydrationWarning={true}
+        className={`${inter.variable} font-sans max-w-6xl mx-auto py-10 px-4`}
+      >
+        <Providers>
+          <Header pages={pages} />
+          <main className="py-10">{children}</main>
+        </Providers>
       </body>
     </html>
   );
