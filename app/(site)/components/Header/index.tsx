@@ -13,7 +13,7 @@ export default function Header({ pages }: Props) {
         <div className="navbar-start">
           <Link
             href="/"
-            className="text-xl text-gray-800 normal-case btn btn-ghost dark:text-white"
+            className="text-xl normal-case text-neutral-800 btn btn-ghost dark:text-white"
           >
             Rizzotto
           </Link>
@@ -22,7 +22,7 @@ export default function Header({ pages }: Props) {
           {pages.map((page) => (
             <Link
               key={page._id}
-              className="max-[770px]:hidden font-semibold p-2 hover:bg-[#edeff1] m-2 rounded-lg transition dark:hover:bg-[#545658]"
+              className="max-[770px]:hidden font-semibold p-2 text-neutral-800 hover:bg-[#edeff1] dark:text-white m-2 rounded-lg transition dark:hover:bg-[#545658]"
               href={`/${page.slug}`}
               aria-current="page"
             >
@@ -58,7 +58,7 @@ export default function Header({ pages }: Props) {
               {pages.map((page) => (
                 <li key={page._id}>
                   <Link
-                    className="text-gray-800 dark:hover:text-white hover:text-neutral-700"
+                    className="text-gray-800 dark:text-white dark:hover:text-white hover:text-neutral-700"
                     href={`/${page.slug}`}
                     aria-current="page"
                   >

@@ -3,7 +3,7 @@ import "../globals.css";
 import { Inter } from "next/font/google";
 import { getPages } from "@/sanity/sanity-utils";
 import React from "react";
-import Providers from "../provider";
+import Providers from "./provider";
 import Header from "./components/Header";
 
 const inter = Inter({

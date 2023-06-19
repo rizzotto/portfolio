@@ -29,52 +29,55 @@ export default function Skills({ skills }: Props) {
     react: (
       <SiReact
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     typescript: (
       <SiTypescript
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     node: (
       <SiNodedotjs
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     next: (
       <SiNextdotjs
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     tailwind: (
       <SiTailwindcss
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     css: (
-      <SiCss3 size={22} className="group-hover:fill-white dark:fill-zinc-800" />
+      <SiCss3
+        size={22}
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
+      />
     ),
     sanity: (
       <TbLetterS
         size={22}
-        className="group-hover:text-white dark:text-zinc-800"
+        className="group-hover:text-white text-zinc-800 dark:text-zinc-800"
       />
     ),
     javascript: (
       <SiJavascript
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     figma: (
       <SiFigma
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
   };
@@ -118,7 +121,7 @@ export default function Skills({ skills }: Props) {
           } flex items-center justify-center gap-2`}
         >
           <div>{skillsLogo[skill.value]}</div>
-          <div className="font-semibold group-hover:text-white dark:text-zinc-800">
+          <div className="font-semibold group-hover:text-white text-zinc-800 dark:text-zinc-800">
             {skill.name}
           </div>
         </Link>

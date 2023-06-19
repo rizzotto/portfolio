@@ -20,25 +20,25 @@ export default function Socials({ socials }: Props) {
     github: (
       <BsGithub
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     instagram: (
       <AiFillInstagram
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     linkedin: (
       <BsLinkedin
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
     twitter: (
       <BsTwitter
         size={22}
-        className="group-hover:fill-white dark:fill-zinc-800"
+        className="group-hover:fill-white fill-zinc-800 dark:fill-zinc-800"
       />
     ),
   };

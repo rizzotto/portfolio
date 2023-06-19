@@ -10,7 +10,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   }, []);
 
   if (!mounted) {
-    return <>{children}</>;
+    return <></>;
   }
   return <ThemeProvider attribute="class">{children}</ThemeProvider>;
 }

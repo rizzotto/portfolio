@@ -9,18 +9,20 @@ export default async function Home() {
   const projects = await getProjects();
   const introduction = await getIntroduction();
 
+  if (!projects || !introduction) return;
+
   return (
     <div>
       {/* responsiveness */}
       <FirstSection introduction={introduction} />
       <div className="animate-slide-in-up">
-        <h2 className="mt-24 text-3xl font-bold text-gray-800 dark:text-white">
+        <h2 className="mt-12 text-3xl font-bold text-gray-800 dark:text-white">
           My Skills
         </h2>
         <div>
           <Skills skills={introduction.skills} />
         </div>
-        <h2 className="mt-24 text-3xl font-bold text-gray-800 dark:text-white">
+        <h2 className="mt-12 text-3xl font-bold text-gray-800 dark:text-white">
           My Projects
         </h2>
         <div className="grid grid-cols-1 gap-8 mt-5 md:grid-cols-2 lg:grid-cols-2">
