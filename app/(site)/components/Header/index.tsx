@@ -9,20 +9,26 @@ type Props = {
 export default function Header({ pages }: Props) {
   return (
     <header className="animate-slide-in-down">
-      <div className="bg-[#FEFEFE] rounded-lg dark:bg-neutral-700 navbar">
+      <div className="bg-[#FEFEFE] rounded-3xl dark:bg-neutral-700 navbar shadow-md">
         <div className="navbar-start">
           <Link
             href="/"
-            className="text-xl normal-case text-neutral-800 btn btn-ghost dark:text-white"
+            className="ml-2 text-xl text-gray-700 normal-case btn btn-ghost dark:text-white"
           >
             Rizzotto
           </Link>
         </div>
         <div className="navbar-center">
+          <Link
+            className="max-[770px]:hidden font-semibold p-2 text-gray-700 hover:bg-[#edeff1] dark:text-white m-2 rounded-lg transition dark:hover:bg-[#545658]"
+            href={`/experiences`}
+          >
+            Experiences
+          </Link>
           {pages.map((page) => (
             <Link
               key={page._id}
-              className="max-[770px]:hidden font-semibold p-2 text-neutral-800 hover:bg-[#edeff1] dark:text-white m-2 rounded-lg transition dark:hover:bg-[#545658]"
+              className="max-[770px]:hidden font-semibold p-2 text-gray-700 hover:bg-[#edeff1] dark:text-white m-2 rounded-lg transition dark:hover:bg-[#545658]"
               href={`/${page.slug}`}
               aria-current="page"
             >
@@ -58,7 +64,7 @@ export default function Header({ pages }: Props) {
               {pages.map((page) => (
                 <li key={page._id}>
                   <Link
-                    className="text-gray-800 dark:text-white dark:hover:text-white hover:text-neutral-700"
+                    className="text-gray-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
                     href={`/${page.slug}`}
                     aria-current="page"
                   >

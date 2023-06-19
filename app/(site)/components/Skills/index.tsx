@@ -114,7 +114,7 @@ export default function Skills({ skills }: Props) {
           rel="noopener noreferrer"
           key={skill.value}
           href={skill.url}
-          className={`p-4 transition ${
+          className={`p-4 transition shadow-sm ${
             skillsBg[skill.value]
           } rounded-xl group bg-neutral-100 dark:bg-zinc-200 ${
             skillsBgDark[skill.value]
