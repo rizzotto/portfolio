@@ -61,6 +61,14 @@ export default function Header({ pages }: Props) {
               tabIndex={0}
               className="p-2 mt-3 bg-[#FEFEFE] shadow dark:bg-neutral-700 menu menu-sm dropdown-content rounded-box w-52"
             >
+              <li>
+                <Link
+                  className="text-gray-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
+                  href={`/experiences`}
+                >
+                  Experiences
+                </Link>
+              </li>
               {pages.map((page) => (
                 <li key={page._id}>
                   <Link
