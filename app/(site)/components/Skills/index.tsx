@@ -121,7 +121,7 @@ export default function Skills({ skills }: Props) {
           } flex items-center justify-center gap-2`}
         >
           <div>{skillsLogo[skill.value]}</div>
-          <div className="font-semibold group-hover:text-white text-zinc-800 dark:text-zinc-800">
+          <div className="font-semibold group-hover:text-white text-zinc-800 dark:text-zinc-800 min-w-[85px] text-center">
             {skill.name}
           </div>
         </Link>

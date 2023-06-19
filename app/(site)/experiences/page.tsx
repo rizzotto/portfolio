@@ -46,7 +46,7 @@ export default async function Experiences() {
                 {formatDate(job.startDate)} -{" "}
                 {job.currentJob ? "Current" : formatDate(job.endDate)}
               </div>
-              <div className="mt-4 text-sm">{job.description}</div>
+              <div className="mt-4 text-sm text-justify">{job.description}</div>
             </div>
             <Image
               className="object-cover ml-8 max-[500px]:ml-0"
