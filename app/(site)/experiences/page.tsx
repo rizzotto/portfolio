@@ -4,7 +4,7 @@ import Image from "next/image";
 export default async function Experiences() {
   const experiences = await getExperiences();
 
-  function formatDate(date) {
+  function formatDate(date: Date) {
     const newDate = new Date(date);
     const month = newDate.getMonth() + 1;
     const year = newDate.getFullYear().toString().slice(-2);
@@ -13,7 +13,7 @@ export default async function Experiences() {
     return formattedDate;
   }
 
-  function getExperienceAnimation(i) {
+  function getExperienceAnimation(i: number) {
     if (i === 0) return "animate-slide-in-left";
     if (i === 1) return "animate-slide-in-right";
     if (i === 2) return "animate-slide-in-left";
