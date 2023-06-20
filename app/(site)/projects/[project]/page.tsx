@@ -13,7 +13,7 @@ export default async function Project({ params }: Props) {
   return (
     <div>
       <header className="flex items-center justify-between">
-        <h1 className="text-5xl font-extrabold text-transparent bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text">
+        <h1 className="text-5xl font-extrabold text-neutral-700 dark:text-white">
           {project.name}
         </h1>
         <a
@@ -21,12 +21,12 @@ export default async function Project({ params }: Props) {
           title="View Project"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-3 font-bold text-gray-500 transition bg-gray-100 rounded-lg whitespace-nowrap hover:bg-pink-500 hover:text-pink-100"
+          className="btn btn-ghost text-neutral-700 dark:text-white"
         >
           View Project
         </a>
       </header>
-      <div className="mt-5 text-lg text-gray-700">
+      <div className="mt-8 text-lg text-justify text-neutral-700 dark:text-white">
         <PortableText value={project.content} />
       </div>
 
@@ -35,7 +35,7 @@ export default async function Project({ params }: Props) {
         alt={project.name}
         width={1920}
         height={1080}
-        className="object-cover mt-10 border-2 border-gray-700 rounded-xl"
+        className="object-cover mt-10 shadow-md rounded-[36px]"
       />
     </div>
   );

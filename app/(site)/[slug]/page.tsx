@@ -13,7 +13,7 @@ export default async function Page({ params }: Props) {
       <h1 className="text-5xl font-extrabold text-transparent bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text">
         {page.title}
       </h1>
-      <div className="mt-10 text-lg text-gray-700">
+      <div className="mt-10 text-lg text-neutral-700">
         <PortableText value={page.content} />
       </div>
     </div>

@@ -46,7 +46,7 @@ export default async function About() {
     <div>
       <div className="grid grid-cols-2 max-[885px]:grid-cols-1 animate-slide-in-right">
         <div className="p-8 m-2 bg-white shadow-md dark:bg-neutral-700 rounded-3xl">
-          <h3 className="mb-4 text-2xl font-bold text-gray-700 dark:text-white">
+          <h3 className="mb-4 text-2xl font-bold text-neutral-700 dark:text-white">
             {info.title}
           </h3>
           <div className="text-justify">{info.content}</div>

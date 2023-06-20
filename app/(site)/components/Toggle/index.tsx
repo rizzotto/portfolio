@@ -26,7 +26,7 @@ const Button = () => {
           currentTheme == "light" ? setTheme("dark") : setTheme("light")
         }
         className={`${
-          currentTheme === "light" ? "bg-gray-700" : "bg-gray-200"
+          currentTheme === "light" ? "bg-neutral-700" : "bg-neutral-200"
         } relative inline-flex h-6 w-11 items-center rounded-full`}
       >
         <span className="sr-only">Use setting</span>

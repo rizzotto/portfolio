@@ -16,13 +16,13 @@ export default async function Home() {
       {/* responsiveness */}
       <FirstSection introduction={introduction} />
       <div className="animate-slide-in-up">
-        <h2 className="mt-8 text-3xl font-bold text-gray-700 dark:text-white">
+        <h2 className="mt-8 text-3xl font-bold text-neutral-700 dark:text-white">
           My Skills
         </h2>
         <div className="mt-5">
           <Skills skills={introduction.skills} />
         </div>
-        <h2 className="mt-8 text-3xl font-bold text-gray-700 dark:text-white">
+        <h2 className="mt-8 text-3xl font-bold text-neutral-700 dark:text-white">
           My Projects
         </h2>
         <div className="grid grid-cols-1 gap-8 mt-5 md:grid-cols-2 lg:grid-cols-2">
@@ -32,7 +32,7 @@ export default async function Home() {
               className="p-1 mt-2 transition rounded-2xl hover:scale-105 hover:border-blue-500"
               key={project._id}
             >
-              <div className="mb-2 font-extrabold text-gray-700 dark:text-white">
+              <div className="mb-2 font-extrabold text-neutral-700 dark:text-white">
                 {project.name}
               </div>
               {project.image && (

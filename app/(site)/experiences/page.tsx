@@ -13,16 +13,17 @@ export default async function Experiences() {
     return formattedDate;
   }
 
-  function getExperienceAnimation(i: number) {
-    if (i === 0) return "animate-slide-in-left";
-    if (i === 1) return "animate-slide-in-right";
-    if (i === 2) return "animate-slide-in-left";
-    if (i === 3) return "animate-slide-in-right";
+  function getExperienceAnimation(i: number): string {
+    if (i % 2 === 0) {
+      return "animate-slide-in-left";
+    } else {
+      return "animate-slide-in-right";
+    }
   }
 
   return (
     <div>
-      <h2 className="mt-8 text-3xl font-bold text-gray-700 dark:text-white">
+      <h2 className="mt-8 text-3xl font-bold text-neutral-700 dark:text-white">
         My Experiences
       </h2>
       <div className="grid grid-cols-1 mt-5">
@@ -37,7 +38,7 @@ export default async function Experiences() {
             <div
               className={`${
                 job.currentJob && "text-white"
-              } flex flex-col justify-between w-full text-gray-700 dark:text-white`}
+              } flex flex-col justify-between w-full text-neutral-700 dark:text-white`}
             >
               <h2 className="text-2xl font-bold max-[500px]:mt-4">
                 {job.role} - {job.company}
