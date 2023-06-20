@@ -13,7 +13,7 @@ export default async function Project({ params }: Props) {
   return (
     <div>
       <header className="flex items-center justify-between">
-        <h1 className="text-5xl font-extrabold text-neutral-700 dark:text-white">
+        <h1 className="text-5xl max-[500px]:text-3xl max-[360px]:text-xl font-extrabold text-neutral-700 dark:text-white">
           {project.name}
         </h1>
         <a

@@ -19,7 +19,9 @@ const Button = () => {
 
   return (
     <div className="flex items-center justify-center gap-2">
-      {currentTheme == "light" ? <CiLight size={28} /> : <CiDark size={28} />}
+      <div className="max-[305px]:invisible">
+        {currentTheme == "light" ? <CiLight size={28} /> : <CiDark size={28} />}
+      </div>
       <Switch
         checked={currentTheme === "light"}
         onChange={() =>
