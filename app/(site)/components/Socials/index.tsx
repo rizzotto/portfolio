@@ -62,7 +62,7 @@ export default function Socials({ socials }: Props) {
       <button className="mt-3 p-4 py-3 font-semibold dark:bg-zinc-200 bg-zinc-800 rounded-2xl min-w-[20%] hover:bg-zinc-700 dark:hover:bg-zinc-50 transition text-white dark:text-neutral-700">
         Contact me
       </button>
-      <div className="mt-3 flex gap-3 max-[768px]:justify-between">
+      <div className="mt-3 flex gap-3 max-[768px]:justify-between max-[333px]:flex-col max-[333px]:items-center">
         {socials.map((social) => (
           <Link
             target="_blank"

@@ -15,8 +15,10 @@ export type Introduction = {
   alt: string;
   image: string;
   quote: string;
+  typewriter: string[];
   socials: Social[];
   subtitle: string;
   skills: Skill[];
-  title: string;
+  startTitle: string;
+  endTitle: string;
 };

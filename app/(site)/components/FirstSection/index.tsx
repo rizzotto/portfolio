@@ -1,34 +1,29 @@
 "use client";
 
 import React from "react";
-import { useTheme } from "next-themes";
-import background from "../../../../public/background.png";
-import backgroundDark from "../../../../public/background-dark.png";
 import { Introduction } from "@/types/Introduction";
 import Image from "next/image";
 import Socials from "../Socials";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 type Props = {
   introduction: Introduction;
 };
 
 export default function FirstSection({ introduction }: Props) {
-  const { systemTheme, theme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const [text, count] = useTypewriter({
+    words: introduction.typewriter,
+    loop: true,
+    delaySpeed: 2000,
+  });
 
   return (
     <section className="flex flex-row justify-between max-[885px]:flex-col max-[885px]:items-center my-4 animate-slide-in-right">
-      <div
-        // style={{
-        //   backgroundImage:
-        //     currentTheme === "dark"
-        //       ? `url(${backgroundDark.src})`
-        //       : `url(${background.src})`,
-        // }}
-        className="max-w-[760px] max-[885px]:max-w-full p-12 max-[640px]:p-6 rounded-3xl transition-transform flex flex-col w-full shadow-md bg-gradient-to-r from-white dark:from-neutral-800  via-sky-200  to-blue-500"
-      >
+      <div className="max-w-[760px] max-[885px]:max-w-full p-12 max-[640px]:p-6 rounded-3xl transition-transform flex flex-col w-full shadow-md bg-gradient-to-r from-white dark:from-neutral-800  via-sky-200  to-blue-500">
         <h1 className="p-2 text-3xl font-bold max-[640px]:text-2xl text-neutral-700 dark:text-white">
-          {introduction.title}
+          {introduction.startTitle} {text}
+          <Cursor cursorColor="#f97316" />
+          {introduction.endTitle}
         </h1>
         <h2 className="p-2 mt-4 text-2xl font-semibold text-neutral-700 max-[640px]:text-lg dark:text-white">
           {introduction.subtitle}

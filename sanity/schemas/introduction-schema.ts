@@ -4,8 +4,13 @@ const introduction = {
   type: "document",
   fields: [
     {
-      name: "title",
-      title: "Title",
+      name: "startTitle",
+      title: "Start Title",
+      type: "string",
+    },
+    {
+      name: "endTitle",
+      title: "End Title",
       type: "string",
     },
     {
@@ -17,6 +22,12 @@ const introduction = {
       name: "quote",
       title: "Quote",
       type: "string",
+    },
+    {
+      name: "typewriter",
+      title: "Typewriter",
+      type: "array",
+      of: [{ type: "string", name: "write" }],
     },
     {
       name: "image",

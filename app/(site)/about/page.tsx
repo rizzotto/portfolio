@@ -1,5 +1,5 @@
+"use client";
 import { getAbout } from "@/sanity/sanity-utils";
-import { PortableText } from "@portabletext/react";
 import { MdLocationOn } from "react-icons/md";
 import {
   FaReact,

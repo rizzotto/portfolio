@@ -98,8 +98,10 @@ export async function getIntroduction(): Promise<Introduction> {
         quote,
         socials,
         subtitle,
-        title,
-        skills
+        skills,
+        typewriter,
+        startTitle,
+        endTitle
     }`
   );
 }
