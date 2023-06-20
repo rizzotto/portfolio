@@ -4,6 +4,7 @@ import clientConfig from "./config/client-config";
 import { Page } from "@/types/Page";
 import { Introduction } from "@/types/Introduction";
 import { Experience } from "@/types/Experience";
+import { About } from "@/types/About";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
@@ -48,6 +49,16 @@ export async function getExperiences(): Promise<Experience> {
           "logo": logo.asset->url,
           "alt": logo.alt
         }
+    }`
+  );
+}
+
+export async function getAbout(): Promise<About> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'about'][0]{
+        ...,
+        "locationImage": locationImage.asset->url,
+        "alt": locationImage.alt
     }`
   );
 }

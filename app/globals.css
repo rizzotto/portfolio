@@ -52,6 +52,15 @@
   }
 }
 
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @layer utilities {
   .animate-slide-in-right {
     animation: slide-in-right 1.5s ease-out;
@@ -71,5 +80,12 @@
   .animate-slide-in-up {
     animation: slide-in-up 2s ease-out;
     animation-iteration-count: 1;
+  }
+
+  .animate-grow {
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
   }
 }

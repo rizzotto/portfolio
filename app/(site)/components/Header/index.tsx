@@ -25,6 +25,12 @@ export default function Header({ pages }: Props) {
           >
             Experiences
           </Link>
+          <Link
+            className="max-[770px]:hidden font-semibold p-2 text-gray-700 hover:bg-[#edeff1] dark:text-white m-2 rounded-lg transition dark:hover:bg-[#545658]"
+            href={`/about`}
+          >
+            About
+          </Link>
           {pages.map((page) => (
             <Link
               key={page._id}
@@ -67,6 +73,14 @@ export default function Header({ pages }: Props) {
                   href={`/experiences`}
                 >
                   Experiences
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
+                  href={`/about`}
+                >
+                  About
                 </Link>
               </li>
               {pages.map((page) => (
