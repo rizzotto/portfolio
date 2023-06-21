@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "../globals.css";
 import { Inter } from "next/font/google";
 import { getPages } from "@/sanity/sanity-utils";
@@ -29,7 +28,7 @@ export default async function RootLayout({
         className={`${inter.variable} font-sans max-w-6xl mx-auto py-10 px-4`}
       >
         <Providers>
-          <Header pages={pages} />
+          <Header />
           <main className="py-10">{children}</main>
         </Providers>
       </body>
