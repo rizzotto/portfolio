@@ -23,7 +23,7 @@ export default async function Experiences() {
 
   return (
     <div>
-      <h2 className="mt-8 text-3xl font-bold text-neutral-700 dark:text-white">
+      <h2 className="mt-4 text-3xl font-bold text-neutral-700 dark:text-white">
         My Experiences
       </h2>
       <div className="grid grid-cols-1 mt-5">

@@ -1,4 +1,3 @@
-"use client";
 import { getAbout } from "@/sanity/sanity-utils";
 import { MdLocationOn } from "react-icons/md";
 import {

@@ -1,12 +1,7 @@
 import Link from "next/link";
 import Toggle from "../Toggle";
-import { Page } from "@/types/Page";
 
-type Props = {
-  pages: Page[];
-};
-
-export default function Header({ pages }: Props) {
+export default function Header() {
   return (
     <header className="animate-slide-in-down">
       <div className="bg-[#FEFEFE] rounded-3xl dark:bg-neutral-700 navbar shadow-md">
@@ -31,16 +26,12 @@ export default function Header({ pages }: Props) {
           >
             About
           </Link>
-          {pages.map((page) => (
-            <Link
-              key={page._id}
-              className="max-[770px]:hidden font-semibold p-2 text-neutral-700 hover:bg-[#edeff1] dark:text-white m-2 rounded-lg transition dark:hover:bg-[#545658]"
-              href={`/${page.slug}`}
-              aria-current="page"
-            >
-              {page.title}
-            </Link>
-          ))}
+          <Link
+            className="max-[770px]:hidden font-semibold p-2 text-neutral-700 hover:bg-[#edeff1] dark:text-white m-2 rounded-lg transition dark:hover:bg-[#545658]"
+            href={`/videos`}
+          >
+            Videos
+          </Link>
         </div>
         <div className="navbar-end">
           <div className="mr-2">
@@ -82,18 +73,13 @@ export default function Header({ pages }: Props) {
                 >
                   About
                 </Link>
+                <Link
+                  className="text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
+                  href={`/about`}
+                >
+                  Videos
+                </Link>
               </li>
-              {pages.map((page) => (
-                <li key={page._id}>
-                  <Link
-                    className="text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
-                    href={`/${page.slug}`}
-                    aria-current="page"
-                  >
-                    {page.title}
-                  </Link>
-                </li>
-              ))}
             </ul>
           </div>
         </div>
