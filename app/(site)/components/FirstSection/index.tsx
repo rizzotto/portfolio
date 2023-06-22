@@ -32,7 +32,7 @@ export default function FirstSection({ introduction }: Props) {
           {introduction.quote}
         </div>
         <div className="mt-auto">
-          <Socials socials={introduction.socials} />
+          <Socials email={introduction.email} socials={introduction.socials} />
         </div>
       </div>
       <div className="relative w-full max-w-[330px] ml-4 max-[885px]:mt-4 max-[885px]:ml-0 max-[885px]:h-[350px] max-[885px]:max-w-full">

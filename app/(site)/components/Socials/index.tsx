@@ -4,6 +4,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import Link from "next/link";
 
 type Props = {
+  email: string;
   socials: Social[];
 };
 
@@ -15,7 +16,7 @@ type SocialsBgType = {
   [key: string]: string;
 };
 
-export default function Socials({ socials }: Props) {
+export default function Socials({ email, socials }: Props) {
   const socialsLogo: SocialsLogoType = {
     github: (
       <BsGithub
@@ -59,9 +60,12 @@ export default function Socials({ socials }: Props) {
 
   return (
     <div className="flex flex-col gap-3 sm:flex-col md:flex-row xl:flex-row">
-      <button className="mt-3 p-4 py-3 font-semibold dark:bg-zinc-200 bg-zinc-800 rounded-2xl min-w-[20%] hover:bg-zinc-700 dark:hover:bg-zinc-50 transition text-white dark:text-neutral-700">
+      <a
+        href={`mailto:${email}?subject=Hello&body=I%20want%20to%20talk%20to%20you%20about`}
+        className="mt-3 p-4 py-3 flex items-center justify-center font-semibold dark:bg-zinc-200 bg-zinc-800 rounded-2xl min-w-[20%] hover:bg-zinc-700 dark:hover:bg-zinc-50 transition text-white dark:text-neutral-700"
+      >
         Contact me
-      </button>
+      </a>
       <div className="mt-3 flex gap-3 max-[768px]:justify-between max-[333px]:flex-col max-[333px]:items-center">
         {socials.map((social) => (
           <Link

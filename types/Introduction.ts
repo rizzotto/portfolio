@@ -13,12 +13,13 @@ export type Introduction = {
   _createdAt: Date;
   _id: string;
   alt: string;
+  email: string;
+  endTitle: string;
   image: string;
   quote: string;
-  typewriter: string[];
-  socials: Social[];
-  subtitle: string;
   skills: Skill[];
+  socials: Social[];
   startTitle: string;
-  endTitle: string;
+  subtitle: string;
+  typewriter: string[];
 };

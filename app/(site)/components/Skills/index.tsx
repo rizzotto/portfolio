@@ -159,14 +159,14 @@ export default function Skills({ skills }: Props) {
   };
 
   return (
-    <div className="grid gap-3 p-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-5">
+    <div className="grid gap-3 pt-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-5">
       {skills.map((skill) => (
         <Link
           target="_blank"
           rel="noopener noreferrer"
           key={skill.value}
           href={skill.url}
-          className={`p-4 transition shadow-sm ${
+          className={`p-5 transition shadow-md ${
             skillsBg[skill.value]
           } rounded-xl group bg-neutral-100 dark:bg-zinc-200 ${
             skillsBgDark[skill.value]

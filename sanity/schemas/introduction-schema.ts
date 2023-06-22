@@ -24,6 +24,11 @@ const introduction = {
       type: "string",
     },
     {
+      name: "email",
+      title: "Email",
+      type: "string",
+    },
+    {
       name: "typewriter",
       title: "Typewriter",
       type: "array",
