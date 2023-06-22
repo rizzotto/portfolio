@@ -18,6 +18,7 @@ import {
 import { FiMonitor } from "react-icons/fi";
 import { ImArrowDown } from "react-icons/im";
 import { MdSmartToy } from "react-icons/md";
+import HeatMap from "../components/HeatMap";
 
 export default async function About() {
   const info = await getAbout();
@@ -81,16 +82,21 @@ export default async function About() {
           </div>
         </div>
       </div>
-      <div className="grid animate-grow grid-cols-6 max-[885px]:grid-cols-4 max-[600px]:grid-cols-3 max-[500px]:grid-cols-2 max-[300px]:grid-cols-1 mt-4">
-        {info.hobbies.map((hobby) => (
-          <div
-            key={hobby.value}
-            className="flex flex-col items-center p-3 m-2 bg-white shadow-md dark:bg-neutral-700 rounded-3xl"
-          >
-            {hobbiesLogo[hobby.value]}
-            <div className="mt-2 font-semibold">{hobby.name}</div>
-          </div>
-        ))}
+      <div className="animate-grow ">
+        <div className="flex justify-center mt-6 p-6 bg-white shadow-md dark:bg-neutral-700 rounded-3xl">
+          <HeatMap />
+        </div>
+        <div className="grid grid-cols-6 max-[885px]:grid-cols-4 max-[600px]:grid-cols-3 max-[500px]:grid-cols-2 max-[300px]:grid-cols-1 mt-4">
+          {info.hobbies.map((hobby) => (
+            <div
+              key={hobby.value}
+              className="flex flex-col items-center p-3 m-2 bg-white shadow-md dark:bg-neutral-700 rounded-3xl"
+            >
+              {hobbiesLogo[hobby.value]}
+              <div className="mt-2 font-semibold">{hobby.name}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

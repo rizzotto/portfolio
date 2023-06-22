@@ -1,6 +1,5 @@
 import "../globals.css";
 import { Inter } from "next/font/google";
-import { getPages } from "@/sanity/sanity-utils";
 import React from "react";
 import Providers from "./provider";
 import Header from "./components/Header";
@@ -19,8 +18,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pages = await getPages();
-
   return (
     <html lang="en">
       <body
