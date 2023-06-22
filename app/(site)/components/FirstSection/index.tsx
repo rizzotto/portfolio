@@ -20,7 +20,7 @@ export default function FirstSection({ introduction }: Props) {
   return (
     <section className="flex flex-row justify-between max-[885px]:flex-col max-[885px]:items-center my-4 animate-slide-in-right">
       <div className="max-w-[760px] max-[885px]:max-w-full p-12 max-[640px]:p-6 rounded-3xl transition-transform flex flex-col w-full shadow-md bg-gradient-to-r from-white dark:from-neutral-800  via-sky-200  to-blue-500">
-        <h1 className="p-2 text-3xl font-bold max-[640px]:text-2xl text-neutral-700 dark:text-white">
+        <h1 className="p-2 text-3xl min-h-[88px] max-[550px]:min-h-[150px] font-bold max-[640px]:text-2xl text-neutral-700 dark:text-white">
           {introduction.startTitle} {text}
           <Cursor cursorColor="#f97316" />
           {introduction.endTitle}
