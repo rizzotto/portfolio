@@ -18,6 +18,8 @@ import {
 import { FiMonitor } from "react-icons/fi";
 import { ImArrowDown } from "react-icons/im";
 import { MdSmartToy } from "react-icons/md";
+import HeatMap from "../components/HeatMap";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 export default async function About() {
   const info = await getAbout();
@@ -81,16 +83,38 @@ export default async function About() {
           </div>
         </div>
       </div>
-      <div className="grid animate-grow grid-cols-6 max-[885px]:grid-cols-4 max-[600px]:grid-cols-3 max-[500px]:grid-cols-2 max-[300px]:grid-cols-1 mt-4">
-        {info.hobbies.map((hobby) => (
-          <div
-            key={hobby.value}
-            className="flex flex-col items-center p-3 m-2 bg-white shadow-md dark:bg-neutral-700 rounded-3xl"
-          >
-            {hobbiesLogo[hobby.value]}
-            <div className="mt-2 font-semibold">{hobby.name}</div>
+      <div className="animate-grow ">
+        <a
+          href="https://github.com/rizzotto"
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" mt-4 mb-4 flex items-center justify-start group"
+        >
+          <div className="text-2xl ml-2 font-bold text-neutral-700 dark:text-white group-hover:text-zinc-950 dark:group-hover:text-neutral-300">
+            Github Commits
           </div>
-        ))}
+          <BsBoxArrowUpRight
+            className="ml-2 group-hover:fill-zinc-950 dark:group-hover:fill-neutral-300"
+            size={24}
+          />
+        </a>
+        <div className="flex justify-center p-6 m-2 bg-white shadow-md dark:bg-neutral-700 rounded-3xl">
+          <HeatMap />
+        </div>
+        <h3 className=" mt-5 mb-4 ml-2 text-2xl font-bold text-neutral-700 dark:text-white">
+          Hobbies
+        </h3>
+        <div className="grid grid-cols-6 max-[885px]:grid-cols-4 max-[600px]:grid-cols-3 max-[500px]:grid-cols-2 max-[300px]:grid-cols-1 mt-4">
+          {info.hobbies.map((hobby) => (
+            <div
+              key={hobby.value}
+              className="flex flex-col items-center p-3 m-2 bg-white shadow-md dark:bg-neutral-700 rounded-3xl"
+            >
+              {hobbiesLogo[hobby.value]}
+              <div className="mt-2 font-semibold">{hobby.name}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

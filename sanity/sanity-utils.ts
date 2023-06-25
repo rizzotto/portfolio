@@ -74,6 +74,7 @@ export async function getIntroduction(): Promise<Introduction> {
         subtitle,
         skills,
         typewriter,
+        email,
         startTitle,
         endTitle
     }`

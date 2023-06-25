@@ -75,7 +75,7 @@ export default function Header() {
                 </Link>
                 <Link
                   className="text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
-                  href={`/about`}
+                  href={`/videos`}
                 >
                   Videos
                 </Link>
