@@ -1,13 +1,39 @@
 import { Videos } from "@/types/Videos";
 
-export default async function getVideos(): Promise<Videos> {
-  const res = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2C%20contentDetails&channelId=UCr2AyBagW7Pf9QYQRoBF_DA&key=${process.env.YT_KEY}`
-  );
+export default async function getVideos(): Promise<Videos | undefined> {
+  const playlistUrl = `https://www.googleapis.com/youtube/v3/playlists?part=id&channelId=UCr2AyBagW7Pf9QYQRoBF_DA&maxResults=1&key=${process.env.YT_KEY}`;
+  const playlistResponse = await fetch(playlistUrl);
+  const playlistData = await playlistResponse.json();
 
-  if (!res.ok) {
+  if (!playlistData.items || playlistData.items.length === 0) {
+    // No playlist found for the channel
+    return;
+  }
+
+  const playlistId = playlistData.items[0].id;
+
+  // Fetch videos from the playlist
+  const videosUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=50&key=${process.env.YT_KEY}`;
+  const videosResponse = await fetch(videosUrl);
+  const videosData = await videosResponse.json();
+
+  if (!videosData.items || videosData.items.length === 0) {
+    // No videos found in the playlist
+    return;
+  }
+
+  if (!playlistResponse.ok) {
     throw new Error("Failed to fetch Videos");
   }
 
-  return res.json();
+  const sortedVideosData = {
+    ...videosData,
+    items: [...videosData.items].sort((a, b) => {
+      const dateA = new Date(a.snippet.publishedAt);
+      const dateB = new Date(b.snippet.publishedAt);
+      return dateB.getTime() - dateA.getTime();
+    }),
+  };
+
+  return sortedVideosData;
 }
