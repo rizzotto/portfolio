@@ -13,7 +13,6 @@ export async function getProjects(): Promise<Project[]> {
         'image': image.asset->url,
         'slug': slug.current,
         'alt': image.alt,
-        content,
         name,
         url,
     }`
@@ -30,6 +29,7 @@ export async function getProject(slug: string): Promise<Project> {
         'alt': image.alt,
         content,
         name,
+        figmaUrl,
         url,
     }`,
     { slug }

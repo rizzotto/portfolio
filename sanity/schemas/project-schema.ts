@@ -33,6 +33,11 @@ const project = {
       type: "url",
     },
     {
+      name: "figmaUrl",
+      title: "Figma URL",
+      type: "url",
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",

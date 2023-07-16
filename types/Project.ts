@@ -5,6 +5,7 @@ export type Project = {
   _id: string;
   alt: string;
   content: PortableTextBlock[];
+  figmaUrl: string;
   image: string;
   name: string;
   slug: string;

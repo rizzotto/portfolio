@@ -1,6 +1,8 @@
 import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import Link from "next/link";
+import { SiFigma } from "react-icons/si";
 
 type Props = {
   params: { project: string };
@@ -12,19 +14,33 @@ export default async function Project({ params }: Props) {
 
   return (
     <div>
-      <header className="flex items-center justify-between">
-        <h1 className="text-5xl max-[500px]:text-3xl max-[360px]:text-xl font-extrabold text-neutral-700 dark:text-white">
+      <header className="flex items-center justify-between max-[540px]:flex-col">
+        <h1 className="text-5xl max-[360px]:text-3xl font-extrabold text-neutral-700 dark:text-white">
           {project.name}
         </h1>
-        <a
-          href={project.url}
-          title="View Project"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-ghost text-neutral-700 dark:text-white"
-        >
-          View Project
-        </a>
+        <div className="flex items-center justify-center gap-4 max-[540px]:mt-4">
+          <Link
+            href={project.figmaUrl}
+            title="View Figma"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`btn btn-outline p-3 text-neutral-700 dark:text-white transition hover:bg-[#f24e1e] group  dark:hover:bg-[#f24e1e] flex items-center justify-center gap-2`}
+          >
+            <SiFigma
+              size={22}
+              className="group-hover:fill-white fill-zinc-800 dark:fill-white"
+            />
+          </Link>
+          <Link
+            href={project.url}
+            title="View Project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline text-neutral-700 dark:text-white"
+          >
+            View Project
+          </Link>
+        </div>
       </header>
       <div className="mt-8 text-lg text-justify text-neutral-700 dark:text-white">
         <PortableText value={project.content} />
