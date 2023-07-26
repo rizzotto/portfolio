@@ -13,7 +13,7 @@ export default async function getVideos(): Promise<Videos | undefined> {
   const playlistId = playlistData.items[0].id;
 
   // Fetch videos from the playlist
-  const videosUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=50&key=${process.env.YT_KEY}`;
+  const videosUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${process.env.YT_KEY}`;
   const videosResponse = await fetch(videosUrl);
   const videosData = await videosResponse.json();
 
@@ -26,14 +26,5 @@ export default async function getVideos(): Promise<Videos | undefined> {
     throw new Error("Failed to fetch Videos");
   }
 
-  const sortedVideosData = {
-    ...videosData,
-    items: [...videosData.items].sort((a, b) => {
-      const dateA = new Date(a.snippet.publishedAt);
-      const dateB = new Date(b.snippet.publishedAt);
-      return dateB.getTime() - dateA.getTime();
-    }),
-  };
-
-  return sortedVideosData;
+  return videosData;
 }
