@@ -159,7 +159,7 @@ export default function Skills({ skills }: Props) {
   };
 
   return (
-    <div className="grid gap-3 pt-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-5">
+    <div className="grid gap-3 pt-3 grid-cols-3 md:grid-cols-6 sm:grid-cols-5 xl:grid-cols-6">
       {skills.map((skill) => (
         <Link
           target="_blank"
@@ -173,9 +173,9 @@ export default function Skills({ skills }: Props) {
           } flex items-center justify-center gap-2`}
         >
           <div>{skillsLogo[skill.value]}</div>
-          <div className="font-semibold group-hover:text-white text-zinc-800 dark:text-zinc-800 min-w-[85px] text-start ml-2">
+          {/* <div className="font-semibold group-hover:text-white text-zinc-800 dark:text-zinc-800 min-w-[85px] text-start ml-2">
             {skill.name}
-          </div>
+          </div> */}
         </Link>
       ))}
     </div>
