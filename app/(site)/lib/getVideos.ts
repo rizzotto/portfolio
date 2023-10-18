@@ -26,8 +26,6 @@ export default async function getVideos(): Promise<Videos | undefined> {
     throw new Error("Failed to fetch Videos");
   }
 
-  console.log(videosData);
-
   const sortedVideosData = {
     ...videosData,
     items: [...videosData.items].sort((a, b) => {
