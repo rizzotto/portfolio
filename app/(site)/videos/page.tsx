@@ -9,7 +9,7 @@ export default async function Videos() {
         My Videos
       </h2>
       <div className="max-[955px]:flex max-[955px]:justify-center max-[955px]:items-center">
-        <div className="grid grid-cols-2 max-[955px]:grid-cols-1 ">
+        <div className="grid grid-cols-2 max-[955px]:grid-cols-1 place-items-center gap-6">
           {data?.items.map((video) => (
             <iframe
               key={video.snippet.thumbnails.default.url}
