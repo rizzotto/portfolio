@@ -1,5 +1,5 @@
 import { getProject } from "@/sanity/sanity-utils";
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
 import { SiFigma } from "react-icons/si";
@@ -11,6 +11,26 @@ type Props = {
 export default async function Project({ params }: Props) {
   const slug = params.project;
   const project = await getProject(slug);
+
+  const customLink: PortableTextComponents = {
+    marks: {
+      link: ({ children, value }) => {
+        const rel = !value.href.startsWith("/")
+          ? "noreferrer noopener"
+          : undefined;
+        return (
+          <a
+            href={value.href}
+            className="text-blue-600 underline hover:text-blue-800 visited:text-purple-600"
+            rel={rel}
+            target="_blank"
+          >
+            {children}
+          </a>
+        );
+      },
+    },
+  };
 
   return (
     <div>
@@ -47,7 +67,7 @@ export default async function Project({ params }: Props) {
         </div>
       </header>
       <div className="mt-8 text-lg text-justify text-neutral-700 dark:text-white">
-        <PortableText value={project.content} />
+        <PortableText value={project.content} components={customLink} />
       </div>
 
       <Image
