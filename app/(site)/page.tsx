@@ -14,13 +14,13 @@ export default async function Home() {
       <FirstSection introduction={introduction} />
       <div className="animate-slide-in-up">
         <h2 className="mt-8 text-3xl font-bold text-neutral-700 dark:text-white">
-          My Skills
+          Skills
         </h2>
         <div className="mt-5">
           <Skills skills={introduction.skills} />
         </div>
         <h2 className="mt-8 text-3xl font-bold text-neutral-700 dark:text-white">
-          My Projects
+          Projects
         </h2>
         <div className="grid grid-cols-1 gap-8 mt-5 md:grid-cols-2 lg:grid-cols-2">
           {projects.map((project) => (
