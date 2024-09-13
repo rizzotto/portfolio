@@ -8,9 +8,9 @@ export default function Header() {
         <div className="navbar-start">
           <Link
             href="/"
-            className="ml-2 text-xl normal-case text-neutral-700 btn btn-ghost dark:text-white"
+            className="p-2 ml-2 text-xl normal-case text-neutral-700 btn btn-ghost dark:text-white"
           >
-            Rizzotto
+            🍚
           </Link>
         </div>
         <div className="navbar-center">
