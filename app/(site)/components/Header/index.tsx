@@ -3,8 +3,8 @@ import Toggle from "../Toggle";
 
 export default function Header() {
   return (
-    <header className="animate-slide-in-down">
-      <div className="bg-[#FEFEFE] rounded-3xl dark:bg-neutral-700 navbar shadow-md">
+    <header className="shadow-md animate-slide-in-down rounded-3xl bg-[#FEFEFE]  dark:bg-neutral-700">
+      <div className="bg-[#FEFEFE]  dark:bg-neutral-700 navbar rounded-3xl">
         <div className="navbar-start">
           <Link
             href="/"
@@ -38,51 +38,35 @@ export default function Header() {
             <Toggle />
           </div>
           {/* Mobile dropdown menu */}
-          <div className="dropdown dropdown-end md:hidden">
-            <label tabIndex={0} className="btn btn-ghost btn-circle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h7"
-                />
-              </svg>
-            </label>
-            <ul className="p-2 mt-3 bg-[#FEFEFE] shadow dark:bg-neutral-700 menu menu-sm dropdown-content rounded-box w-52">
-              <li>
-                <Link
-                  className="text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
-                  href={`/experiences`}
-                >
-                  Experiences
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
-                  href={`/about`}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
-                  href={`/videos`}
-                >
-                  Videos
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
+      </div>
+      <div className="md:hidden bg-[#FEFEFE]  dark:bg-neutral-700 rounded-3xl">
+        <ul className="flex p-3 justify-evenly rounded-box max-[320px]:flex-col max-[320px]:items-center max-[320px]:gap-2">
+          <li>
+            <Link
+              className="font-semibold text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
+              href={`/experiences`}
+            >
+              Experiences
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="font-semibold text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
+              href={`/about`}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="font-semibold text-neutral-700 dark:text-white dark:hover:text-white hover:text-neutral-700"
+              href={`/videos`}
+            >
+              Videos
+            </Link>
+          </li>
+        </ul>
       </div>
     </header>
   );
