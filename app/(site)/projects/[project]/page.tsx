@@ -15,7 +15,7 @@ export default async function Project({ params }: Props) {
   const customLink: PortableTextComponents = {
     marks: {
       link: ({ children, value }) => {
-        const rel = !value.href.startsWith("/")
+        const rel = !value?.href?.startsWith("/")
           ? "noreferrer noopener"
           : undefined;
         return (

@@ -166,11 +166,11 @@ export default function Skills({ skills }: Props) {
           rel="noopener noreferrer"
           key={skill.value}
           href={skill.url}
-          className={`p-5 transition shadow-md ${
+          className={`p-5 transition transform shadow-md ${
             skillsBg[skill.value]
           } rounded-xl group bg-neutral-100 dark:bg-zinc-200 ${
             skillsBgDark[skill.value]
-          } flex items-center justify-center gap-2`}
+          } flex items-center justify-center gap-2 active:scale-95 transition-transform duration-200 ease-in-out`}
         >
           <div>{skillsLogo[skill.value]}</div>
           {/* skills name to remove if wanted */}

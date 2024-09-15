@@ -62,7 +62,7 @@ export default function Socials({ email, socials }: Props) {
     <div className="flex flex-col gap-3 sm:flex-col md:flex-row xl:flex-row">
       <a
         href={`mailto:${email}?subject=Hello&body=I%20want%20to%20talk%20to%20you%20about`}
-        className="mt-3 p-4 py-3 flex items-center justify-center font-semibold dark:bg-zinc-200 bg-zinc-800 rounded-2xl min-w-[20%] hover:bg-zinc-700 dark:hover:bg-zinc-50 transition text-white dark:text-neutral-700"
+        className="active:scale-95 mt-3 p-4 py-3 flex items-center justify-center font-semibold dark:bg-zinc-200 bg-zinc-800 rounded-2xl min-w-[20%] hover:bg-zinc-700 dark:hover:bg-zinc-50 transition text-white dark:text-neutral-700"
       >
         Contact me
       </a>
@@ -73,7 +73,7 @@ export default function Socials({ email, socials }: Props) {
             rel="noopener noreferrer"
             key={social.name}
             href={social.url}
-            className={`p-4 transition ${
+            className={`p-4 transition transform group active:scale-95 ${
               socialsBg[social.name]
             } rounded-full group bg-white dark:bg-zinc-200 ${
               socialsBgDark[social.name]
