@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Skills from "./components/Skills";
 import FirstSection from "@/app/(site)/components/FirstSection";
+
 export default async function Home() {
   const projects = await getProjects();
   const introduction = await getIntroduction();
@@ -26,7 +27,7 @@ export default async function Home() {
                 {project.name}
               </div>
               {project.image && (
-                <div className="relative w-full h-[19rem] max-[1160px]:h-[15rem] max-[930px]:h-[12rem] max-[768px]:h-[20rem] max-[540px]:h-[17rem] max-[475px]:h-[15rem]  max-[450px]:h-[10rem] max-[300px]:h-[6rem]">
+                <div className="relative w-full h-[19rem] max-[1160px]:h-[18rem] max-[930px]:h-[15rem] max-[768px]:h-[25rem] max-[540px]:h-[18rem] max-[475px]:h-[15rem]  max-[450px]:h-[15rem] max-[300px]:h-[8rem]">
                   <Image
                     alt={project.alt}
                     className="object-cover shadow-md rounded-2xl"

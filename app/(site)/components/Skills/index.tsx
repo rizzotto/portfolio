@@ -159,7 +159,7 @@ export default function Skills({ skills }: Props) {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-3 pt-3 md:grid-cols-6 sm:grid-cols-5 xl:grid-cols-6">
+    <div className="grid grid-cols-6 gap-3 pt-3 max-[450px]:grid-cols-2 max-[760px]:grid-cols-3 max-[890px]:grid-cols-5 max-[300px]:grid-cols-1 lg:grid-cols-6">
       {skills.map((skill) => (
         <Link
           target="_blank"
