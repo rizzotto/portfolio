@@ -38,7 +38,6 @@ export default async function Home() {
             </Link>
           ))}
         </div>
-        {/* Adding clear space between Projects and Skills */}
         <div className="mt-12" />
         <h2 className="mt-8 text-3xl font-bold text-neutral-700 dark:text-white">
           Skills
