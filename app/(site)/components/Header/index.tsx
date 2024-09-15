@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import Toggle from "../Toggle";
@@ -7,7 +8,11 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
-  const closeDropdown = () => setIsDropdownOpen(false);
+  const closeDropdown = () => {
+    setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 100);
+  };
 
   return (
     <header className="animate-slide-in-down">

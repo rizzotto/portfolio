@@ -29,7 +29,7 @@ export default async function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="py-10">{children}</main>
+          <main className="py-5 md:py-10">{children}</main>
         </Providers>
       </body>
     </html>
