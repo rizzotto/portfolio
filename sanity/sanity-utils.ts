@@ -7,7 +7,7 @@ import { About } from "@/types/About";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'project'] | order(order asc){
+    groq`*[_type == 'project'] | order(_createdAt desc){
         _createdAt,
         _id,
         'image': image.asset->url,

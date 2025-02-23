@@ -43,23 +43,6 @@ const project = {
       type: "array",
       of: [{ type: "block" }],
     },
-    {
-      name: "order",
-      title: "Order",
-      type: "number",
-    },
-  ],
-  orderings: [
-    {
-      title: "Order Ascending",
-      name: "orderAsc",
-      by: [{ field: "order", direction: "asc" }],
-    },
-    {
-      title: "Order Descending",
-      name: "orderDesc",
-      by: [{ field: "order", direction: "desc" }],
-    },
   ],
 };
 
